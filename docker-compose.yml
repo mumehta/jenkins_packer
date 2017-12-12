@@ -1,0 +1,26 @@
+---
+version: '2'
+services:
+  validate-template:
+    build:
+      context: .
+    working_dir: /usr/src
+    entrypoint:
+      - packer
+      - validate
+      - jenkins_packer.json
+
+  build-template:
+    build:
+      context: .
+    working_dir: /usr/src
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_REGION
+      - VPC_ID
+      - SUBNET_ID
+    entrypoint:
+      - packer
+      - build
+      - jenkins_packer.json

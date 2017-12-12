@@ -1,0 +1,2 @@
+packer validate jenkins_packer.json
+packer build jenkins_packer.json
