@@ -1,10 +1,10 @@
 {
   "variables": {
-    "aws_access_key": "{{ env `aws_access_key_id`}}",
-    "aws_secret_key": "{{ env `aws_secret_access_key`}}",
-    "aws_region": "{{ env `aws_region`}}",
-    "vpc_id": "{{ env `vpc_id`}}",
-    "subnet_id": "{{ env `subnet_id`}}"
+    "aws_access_key": "{{ env `AWS_ACCESS_KEY_ID`}}",
+    "aws_secret_key": "{{ env `AWS_SECRET_ACCESS_KEY`}}",
+    "aws_region": "{{ env `AWS_REGION`}}",
+    "vpc_id": "{{ env `VPC_ID`}}",
+    "subnet_id": "{{ env `SUBNET_ID`}}"
   },
   "builders": [{
     "access_key": "{{user `aws_access_key`}}",

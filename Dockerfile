@@ -9,3 +9,4 @@ ENV aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
 ENV aws_region ${AWS_REGION}
 ENV vpc_id ${VPC_ID}
 ENV subnet_id ${SUBNET_ID}
+RUN echo ${aws_access_key_id}
